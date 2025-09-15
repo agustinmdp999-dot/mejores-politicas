@@ -119,17 +119,16 @@
     </div>
   </div>
 
-  <script>
-    // Rotación simple de líneas de WhatsApp (opcional)
-    (function(){
-      const LINEAS = [ /* '5491134498805','5491134498805' */ ];
-      const MENSAJE = 'Hola, tengo una consulta';
-      const a = document.getElementById('wa');
-      if(LINEAS.length){
-        const slot = Math.floor(Date.now()/(30*60*1000)) % LINEAS.length; // cada 30 min
-        a.href = `https://wa.me/${LINEAS[slot]}?text=${encodeURIComponent(MENSAJE)}`;
-      }
-    })();
+<script>
+  (function(){
+    const LINEAS = ['5491134498805']; // podés agregar más luego
+    const MENSAJE = 'Hola, tengo una consulta';
+    const a = document.getElementById('wa');
+    const slot = Math.floor(Date.now()/(30*60*1000)) % LINEAS.length;
+    a.href = `https://wa.me/${LINEAS[slot]}?text=${encodeURIComponent(MENSAJE)}`;
+  })();
+</script>
+
 
     // Gate +18 (muy simple; guarda decisión en sessionStorage)
     (function(){
