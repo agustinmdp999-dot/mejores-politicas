@@ -1,77 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>/* BOTÓN UNIVERSAL (móvil + desktop) */
-.btn, .btn-whatsapp{
-  -webkit-appearance:none; appearance:none;
-  display:block; width:100%; max-width:560px; margin:0 auto;
-  border:0; border-radius:999px; padding:16px 22px;
-  font-weight:800; font-size:18px; letter-spacing:.3px; text-align:center;
-  text-decoration:none; color:#06250f; cursor:pointer;
-}
-.btn:link, .btn:visited, .btn-whatsapp:link, .btn-whatsapp:visited{ text-decoration:none; color:inherit; }
-
-.btn--wa, .btn-whatsapp{
-  background:linear-gradient(90deg,#2EE77A,#25D366,#2EE77A);
-  box-shadow:0 10px 28px rgba(37,211,102,.45), inset 0 0 10px rgba(0,0,0,.08);
-}
-.btn--wa:active, .btn-whatsapp:active{ transform:translateY(1px); }
-
-/* que la fila del CTA centre el botón */
-.cta{ display:flex; justify-content:center; }
-
-/* Más grande en desktop */
-@media (min-width: 768px){
-  .btn, .btn-whatsapp{ font-size:22px; padding:18px 28px; max-width:640px; }
-}
-
-/* Efecto pulso suave (opcional) */
-.pulse{ animation:pulse 2.2s ease-in-out infinite; }
-@keyframes pulse{
-  0%,100%{ transform:scale(1); box-shadow:0 10px 28px rgba(37,211,102,.45); }
-  50%{ transform:scale(1.02); box-shadow:0 16px 40px rgba(37,211,102,.60); }
-}
-
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>GANAMOS.net — Atención 24 hs</title>
-  <meta name="description" content="Atención 24 hs. Información y soporte. Juego responsable +18. Promociones sujetas a T&C." />
-  <!-- OG mínimo (evitá imágenes de juego) -->
+  <meta name="description" content="Soporte y consultas por WhatsApp. Atención 24 hs. Juego responsable +18. Promociones sujetas a T&C." />
   <meta property="og:title" content="GANAMOS.net — Atención 24 hs"/>
   <meta property="og:description" content="Soporte y consultas por WhatsApp. Juego responsable +18."/>
   <meta property="og:type" content="website"/>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg1:#18032f; --bg2:#0b0716; --text:#ffffff; --muted:#d8cfff; --accent:#25D366; --violet:#8b3cff;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0; font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--text);
+    body{
+      margin:0; font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--text);
       background: radial-gradient(60% 70% at 20% 0%, rgba(139,60,255,.25) 0%, rgba(139,60,255,0) 60%),
                   linear-gradient(180deg,var(--bg1) 0%, var(--bg2) 100%);
     }
     .wrap{min-height:100dvh; display:flex; flex-direction:column; padding:20px; gap:18px}
 
-    /* Cabecera simple */
-    .brand{display:flex; align-items:center; gap:10px;}
+    /* Cabecera */
+    .brand{display:flex; align-items:center; gap:10px}
     .brand__logo{width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg,#2b1160,#4f1bb3); display:grid; place-items:center; font-weight:800}
     .brand__name{font-weight:800; letter-spacing:.5px}
 
-    /* CTA WhatsApp (neutro) */
-    .cta{display:flex; flex-direction:column; gap:12px; margin-top:8px}
-    .btn{appearance:none; border:0; border-radius:999px; padding:14px 18px; font-weight:800; text-align:center; cursor:pointer}
-    .btn--wa{background:linear-gradient(90deg, #2EE77A, var(--accent)); color:#06250f; box-shadow:0 8px 24px rgba(37,211,102,.40)}
+    /* BOTÓN UNIVERSAL (móvil + desktop) */
+    .btn,.btn-whatsapp{
+      -webkit-appearance:none; appearance:none;
+      display:block; width:100%; max-width:560px; margin:0 auto;
+      border:0; border-radius:999px; padding:16px 22px;
+      font-weight:800; font-size:18px; letter-spacing:.3px; text-align:center;
+      text-decoration:none; color:#06250f; cursor:pointer;
+    }
+    .btn:link,.btn:visited,.btn-whatsapp:link,.btn-whatsapp:visited{ text-decoration:none; color:inherit }
+    .btn--wa,.btn-whatsapp{
+      background:linear-gradient(90deg,#2EE77A,#25D366,#2EE77A);
+      box-shadow:0 10px 28px rgba(37,211,102,.45), inset 0 0 10px rgba(0,0,0,.08);
+    }
+    .btn--wa:active,.btn-whatsapp:active{ transform:translateY(1px) }
+    .cta{ display:flex; justify-content:center; flex-direction:column; gap:12px; margin-top:8px }
+    @media (min-width:768px){
+      .btn,.btn-whatsapp{ font-size:22px; padding:18px 28px; max-width:640px }
+    }
+    .pulse{ animation:pulse 2.2s ease-in-out infinite }
+    @keyframes pulse{
+      0%,100%{ transform:scale(1); box-shadow:0 10px 28px rgba(37,211,102,.45) }
+      50%{ transform:scale(1.02); box-shadow:0 16px 40px rgba(37,211,102,.60) }
+    }
     .hint{font-size:12px; color:var(--muted); text-align:center}
 
-    /* Ribbons neutras */
-    .ribbon{border-radius:999px; padding:12px 16px; text-align:center; font-weight:800; background:rgba(255,255,255,.14); backdrop-filter:blur(6px);}
+    /* Ribbon neutra */
+    .ribbon{border-radius:999px; padding:12px 16px; text-align:center; font-weight:800; background:rgba(255,255,255,.14); backdrop-filter:blur(6px)}
 
-    /* Bloques colapsables */
+    /* Colapsables */
     details{background:rgba(255,255,255,.06); border-radius:14px; box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
     summary{list-style:none; cursor:pointer; padding:12px 14px; font-weight:700; display:flex; gap:8px; align-items:center}
     summary::-webkit-details-marker{display:none}
-    details[open] > summary{border-bottom:1px solid rgba(255,255,255,.08)}
+    details[open]>summary{border-bottom:1px solid rgba(255,255,255,.08)}
     .box{padding:12px 14px; font-size:14px; color:#efe7ff}
 
     /* Legal al pie */
@@ -79,7 +69,7 @@
     .legal{background:rgba(255,255,255,.06); border-radius:14px; padding:12px 14px; font-size:12px; color:#d9d0ff; line-height:1.55}
     .chip{display:inline-block; padding:4px 10px; border-radius:999px; background:rgba(139,60,255,.35); font-weight:800; margin-right:8px}
 
-    /* Modal de edad (gate) */
+    /* Gate +18 */
     .gate{position:fixed; inset:0; background:rgba(0,0,0,.65); display:none; align-items:center; justify-content:center; padding:24px}
     .gate__card{max-width:460px; width:100%; background:#1b0b3a; border-radius:18px; box-shadow:0 10px 40px rgba(0,0,0,.45); padding:18px}
     .gate__card h2{margin:6px 0 10px 0}
@@ -96,10 +86,9 @@
     </header>
 
     <section class="cta" aria-label="Contacto">
-   <a class="btn btn--wa pulse" id="wa" target="_blank" rel="noopener nofollow"
-   href="https://wa.me/5491134498805?text=Hola%20quiero%20mi%20bono%2030%25">
-  📲 PEDÍ TU BONO 30%
-</a>
+      <a class="btn btn--wa pulse" id="wa" target="_blank" rel="noopener nofollow"
+         href="https://wa.me/5491134498805?text=Hola%20quiero%20mi%20bono%2030%25">
+        📲 PEDÍ TU BONO 30%
       </a>
       <div class="hint">Soporte y consultas • Atención 24 hs</div>
     </section>
@@ -133,12 +122,38 @@
 
     <footer>
       <div class="legal">
-        <span class="chip">+18</span> Juego responsable. Participar implica riesgos; jugá con moderación. Si el juego deja de ser entretenimiento, buscá ayuda profesional. Servicio disponible sólo donde la ley lo permita.
+        <span class="chip">+18</span>
+        Juego responsable. Participar implica riesgos; jugá con moderación. Si el juego deja de ser entretenimiento, buscá ayuda profesional. Servicio disponible sólo donde la ley lo permita.
       </div>
     </footer>
   </div>
 
-  <!-- Age/region gate (simple) -->
+  <!-- Rotación de líneas (opcional). Si no la usás, dejá solo el href fijo del botón. -->
+  <script>
+    (function(){
+      const LINEAS = []; // ej: ['5491134498805','549XXXXXXXXXX']
+      const MENSAJE = 'Hola, quiero mi bono 30%';
+      const a = document.getElementById('wa');
+      if(LINEAS.length){
+        const slot = Math.floor(Date.now()/(30*60*1000)) % LINEAS.length; // cada 30 min
+        a.href = `https://wa.me/${LINEAS[slot]}?text=${encodeURIComponent(MENSAJE)}`;
+      }
+    })();
+  </script>
+
+  <!-- Gate +18 (simple) -->
+  <script>
+    (function(){
+      const key='gate_ok_v1';
+      const gate=document.getElementById('gate');
+      // Si querés activar el gate visual, descomentá el bloque HTML del gate y estas líneas:
+      // if(!sessionStorage.getItem(key)) gate.style.display='flex';
+      // document.getElementById('gateYes').onclick=function(){sessionStorage.setItem(key,'1'); gate.style.display='none';}
+      // document.getElementById('gateNo').onclick=function(){ location.href='https://about.meta.com/policies/ads/'; }
+    })();
+  </script>
+
+  <!-- (Opcional) HTML del gate +18. Déjalo comentado si no lo usás para que Meta no te lo marque como modal intrusivo.
   <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
     <div class="gate__card">
       <h2 id="gateTitle">Confirmación de edad</h2>
@@ -150,26 +165,6 @@
       <p class="small">Al continuar, aceptás nuestros Términos y la Política de Privacidad.</p>
     </div>
   </div>
-
-<script>
-  (function(){
-    const LINEAS = ['5491134498805']; // podés agregar más luego
-    const MENSAJE = 'Hola, tengo una consulta';
-    const a = document.getElementById('wa');
-    const slot = Math.floor(Date.now()/(30*60*1000)) % LINEAS.length;
-    a.href = `https://wa.me/${LINEAS[slot]}?text=${encodeURIComponent(MENSAJE)}`;
-  })();
-</script>
-
-
-    // Gate +18 (muy simple; guarda decisión en sessionStorage)
-    (function(){
-      const key='gate_ok_v1';
-      const gate=document.getElementById('gate');
-      if(!sessionStorage.getItem(key)) gate.style.display='flex';
-      document.getElementById('gateYes').onclick=function(){sessionStorage.setItem(key,'1'); gate.style.display='none';}
-      document.getElementById('gateNo').onclick=function(){ location.href='https://about.meta.com/policies/ads/'; } // o a otra página informativa
-    })();
-  </script>
+  -->
 </body>
 </html>
