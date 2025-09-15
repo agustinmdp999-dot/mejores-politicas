@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>/* BOTÓN UNIVERSAL (móvil + desktop) */
+.btn, .btn-whatsapp{
+  -webkit-appearance:none; appearance:none;
+  display:block; width:100%; max-width:560px; margin:0 auto;
+  border:0; border-radius:999px; padding:16px 22px;
+  font-weight:800; font-size:18px; letter-spacing:.3px; text-align:center;
+  text-decoration:none; color:#06250f; cursor:pointer;
+}
+.btn:link, .btn:visited, .btn-whatsapp:link, .btn-whatsapp:visited{ text-decoration:none; color:inherit; }
+
+.btn--wa, .btn-whatsapp{
+  background:linear-gradient(90deg,#2EE77A,#25D366,#2EE77A);
+  box-shadow:0 10px 28px rgba(37,211,102,.45), inset 0 0 10px rgba(0,0,0,.08);
+}
+.btn--wa:active, .btn-whatsapp:active{ transform:translateY(1px); }
+
+/* que la fila del CTA centre el botón */
+.cta{ display:flex; justify-content:center; }
+
+/* Más grande en desktop */
+@media (min-width: 768px){
+  .btn, .btn-whatsapp{ font-size:22px; padding:18px 28px; max-width:640px; }
+}
+
+/* Efecto pulso suave (opcional) */
+.pulse{ animation:pulse 2.2s ease-in-out infinite; }
+@keyframes pulse{
+  0%,100%{ transform:scale(1); box-shadow:0 10px 28px rgba(37,211,102,.45); }
+  50%{ transform:scale(1.02); box-shadow:0 16px 40px rgba(37,211,102,.60); }
+}
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>GANAMOS.net — Atención 24 hs</title>
@@ -66,9 +96,10 @@
     </header>
 
     <section class="cta" aria-label="Contacto">
-   <a class="btn-whatsapp pulse" target="_blank" rel="noopener nofollow"
+   <a class="btn btn--wa pulse" id="wa" target="_blank" rel="noopener nofollow"
    href="https://wa.me/5491134498805?text=Hola%20quiero%20mi%20bono%2030%25">
   📲 PEDÍ TU BONO 30%
+</a>
       </a>
       <div class="hint">Soporte y consultas • Atención 24 hs</div>
     </section>
