@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>GANAMOS.net — Atención 24 hs</title>
+  <meta name="description" content="Atención 24 hs. Información y soporte. Juego responsable +18. Promociones sujetas a T&C." />
+  <!-- OG mínimo (evitá imágenes de juego) -->
+  <meta property="og:title" content="GANAMOS.net — Atención 24 hs"/>
+  <meta property="og:description" content="Soporte y consultas por WhatsApp. Juego responsable +18."/>
+  <meta property="og:type" content="website"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#18032f; --bg2:#0b0716; --text:#ffffff; --muted:#d8cfff; --accent:#25D366; --violet:#8b3cff;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--text);
+      background: radial-gradient(60% 70% at 20% 0%, rgba(139,60,255,.25) 0%, rgba(139,60,255,0) 60%),
+                  linear-gradient(180deg,var(--bg1) 0%, var(--bg2) 100%);
+    }
+    .wrap{min-height:100dvh; display:flex; flex-direction:column; padding:20px; gap:18px}
+
+    /* Cabecera simple */
+    .brand{display:flex; align-items:center; gap:10px;}
+    .brand__logo{width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg,#2b1160,#4f1bb3); display:grid; place-items:center; font-weight:800}
+    .brand__name{font-weight:800; letter-spacing:.5px}
+
+    /* CTA WhatsApp (neutro) */
+    .cta{display:flex; flex-direction:column; gap:12px; margin-top:8px}
+    .btn{appearance:none; border:0; border-radius:999px; padding:14px 18px; font-weight:800; text-align:center; cursor:pointer}
+    .btn--wa{background:linear-gradient(90deg, #2EE77A, var(--accent)); color:#06250f; box-shadow:0 8px 24px rgba(37,211,102,.40)}
+    .hint{font-size:12px; color:var(--muted); text-align:center}
+
+    /* Ribbons neutras */
+    .ribbon{border-radius:999px; padding:12px 16px; text-align:center; font-weight:800; background:rgba(255,255,255,.14); backdrop-filter:blur(6px);}
+
+    /* Bloques colapsables */
+    details{background:rgba(255,255,255,.06); border-radius:14px; box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+    summary{list-style:none; cursor:pointer; padding:12px 14px; font-weight:700; display:flex; gap:8px; align-items:center}
+    summary::-webkit-details-marker{display:none}
+    details[open] > summary{border-bottom:1px solid rgba(255,255,255,.08)}
+    .box{padding:12px 14px; font-size:14px; color:#efe7ff}
+
+    /* Legal al pie */
+    footer{margin-top:auto}
+    .legal{background:rgba(255,255,255,.06); border-radius:14px; padding:12px 14px; font-size:12px; color:#d9d0ff; line-height:1.55}
+    .chip{display:inline-block; padding:4px 10px; border-radius:999px; background:rgba(139,60,255,.35); font-weight:800; margin-right:8px}
+
+    /* Modal de edad (gate) */
+    .gate{position:fixed; inset:0; background:rgba(0,0,0,.65); display:none; align-items:center; justify-content:center; padding:24px}
+    .gate__card{max-width:460px; width:100%; background:#1b0b3a; border-radius:18px; box-shadow:0 10px 40px rgba(0,0,0,.45); padding:18px}
+    .gate__card h2{margin:6px 0 10px 0}
+    .gate__actions{display:flex; gap:10px; margin-top:14px}
+    .btn--secondary{background:rgba(255,255,255,.12); color:#fff}
+    .small{font-size:12px; color:#c9bbff}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="brand" aria-label="Identidad">
+      <div class="brand__logo">G</div>
+      <div class="brand__name">GANAMOS.net</div>
+    </header>
+
+    <section class="cta" aria-label="Contacto">
+      <a class="btn btn--wa" id="wa" target="_blank" rel="noopener nofollow" href="https://wa.me/TU_NUMERO?text=Hola%20tengo%20una%20consulta">
+        Chatear por WhatsApp
+      </a>
+      <div class="hint">Soporte y consultas • Atención 24 hs</div>
+    </section>
+
+    <div class="ribbon">ATENCIÓN LAS 24 HS</div>
+
+    <details>
+      <summary>Promociones vigentes</summary>
+      <div class="box">
+        <p>Las promociones, si las hubiera, están <strong>sujetas a Términos y Condiciones</strong> y pueden variar por usuario o región. Consultá disponibilidad por WhatsApp.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Términos y Condiciones</summary>
+      <div class="box">
+        <ul>
+          <li>Promociones no acumulables, salvo que se indique lo contrario.</li>
+          <li>Requisitos y topes pueden aplicar. Verificá los detalles antes de participar.</li>
+          <li>Oferta dirigida exclusivamente a mayores de 18 años en jurisdicciones permitidas.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>Política de Privacidad</summary>
+      <div class="box">
+        <p>Al contactarnos por WhatsApp aceptás el uso de tus datos para responder consultas y fines comerciales relacionados. Podés solicitar acceso, rectificación o baja de tus datos.</p>
+      </div>
+    </details>
+
+    <footer>
+      <div class="legal">
+        <span class="chip">+18</span> Juego responsable. Participar implica riesgos; jugá con moderación. Si el juego deja de ser entretenimiento, buscá ayuda profesional. Servicio disponible sólo donde la ley lo permita.
+      </div>
+    </footer>
+  </div>
+
+  <!-- Age/region gate (simple) -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+    <div class="gate__card">
+      <h2 id="gateTitle">Confirmación de edad</h2>
+      <p>Este sitio está dirigido exclusivamente a <strong>mayores de 18 años</strong>. Además, sólo opera en jurisdicciones donde está permitido.</p>
+      <div class="gate__actions">
+        <button class="btn btn--secondary" id="gateNo">No soy mayor de 18</button>
+        <button class="btn btn--wa" id="gateYes">Sí, soy mayor de 18</button>
+      </div>
+      <p class="small">Al continuar, aceptás nuestros Términos y la Política de Privacidad.</p>
+    </div>
+  </div>
+
+  <script>
+    // Rotación simple de líneas de WhatsApp (opcional)
+    (function(){
+      const LINEAS = [ /* '549XXXXXXXXXX','549YYYYYYYYYY' */ ];
+      const MENSAJE = 'Hola, tengo una consulta';
+      const a = document.getElementById('wa');
+      if(LINEAS.length){
+        const slot = Math.floor(Date.now()/(30*60*1000)) % LINEAS.length; // cada 30 min
+        a.href = `https://wa.me/${LINEAS[slot]}?text=${encodeURIComponent(MENSAJE)}`;
+      }
+    })();
+
+    // Gate +18 (muy simple; guarda decisión en sessionStorage)
+    (function(){
+      const key='gate_ok_v1';
+      const gate=document.getElementById('gate');
+      if(!sessionStorage.getItem(key)) gate.style.display='flex';
+      document.getElementById('gateYes').onclick=function(){sessionStorage.setItem(key,'1'); gate.style.display='none';}
+      document.getElementById('gateNo').onclick=function(){ location.href='https://about.meta.com/policies/ads/'; } // o a otra página informativa
+    })();
+  </script>
+</body>
+</html>
